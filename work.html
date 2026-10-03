@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radius | Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <span class="loader-brand">◉ RADIUS</span>
+  <div class="loader-bar"></div>
+</div>
+
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+    <div class="container-fluid px-4 px-lg-5">
+      <a class="navbar-brand brand-text" href="index.html"><span class="brand-icon">◉</span> RADIUS</a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav gap-lg-4">
+          <li class="nav-item"><a class="nav-link nav-custom" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link nav-custom active" href="work.html">PROJECTS</a></li>
+          <li class="nav-item"><a class="nav-link nav-custom" href="about.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link nav-custom" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Page header + filter buttons (Bootstrap button group pattern) -->
+  <section class="section-panel" style="padding-top:140px;">
+    <div class="container-fluid px-4 px-lg-5">
+      <p class="eyebrow reveal">PORTFOLIO</p>
+      <h1 class="section-title-xl reveal">Projects</h1>
+      <!-- Filter buttons — data-filter drives JS show/hide logic -->
+      <div class="filter-row reveal mt-4" role="group" aria-label="Filter by category">
+        <button class="filter-btn active" type="button" data-filter="all">ALL</button>
+        <button class="filter-btn" type="button" data-filter="architecture">ARCHITECTURE</button>
+        <button class="filter-btn" type="button" data-filter="landscape">LANDSCAPE</button>
+        <button class="filter-btn" type="button" data-filter="street">STREET</button>
+        <button class="filter-btn" type="button" data-filter="editorial">EDITORIAL</button>
+        <button class="filter-btn" type="button" data-filter="portrait">PORTRAIT</button>
+        <button class="filter-btn" type="button" data-filter="nature">NATURE</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects grid — Bootstrap asymmetric col-lg-8 / col-lg-4 layout.
+       Each .work-card has data-category for the filter JS.
+       All images from Unsplash — real photography content.
+       CSS grayscale filter + colour reveal on hover (multimedia). -->
+  <section class="work-grid-section section-panel" style="padding-top:0;">
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="row g-4">
+
+        <!-- 01 Architecture — wide featured -->
+        <div class="col-lg-8">
+          <a href="project-1.html" class="work-card big-card reveal" data-category="architecture" aria-label="View Silent Geometries">
+            <img src="https://images.pexels.com/photos/30797258/pexels-photo-30797258.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                 alt="Brutalist architecture with geometric shadow patterns" loading="lazy">
+            <div class="work-info">
+              <h3>Silent Geometries</h3>
+              <p>ARCHITECTURE — 2024</p>
+            </div>
+            <span class="work-year">01</span>
+          </a>
+        </div>
+
+        <!-- 02 Landscape — narrow -->
+        <div class="col-lg-4">
+          <a href="project-2.html" class="work-card reveal" data-category="landscape" aria-label="View Meridian">
+            <img src="https://images.pexels.com/photos/2132095/pexels-photo-2132095.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="Golden hour over layered mountain ranges" loading="lazy">
+            <div class="work-info">
+              <h3>Meridian</h3>
+              <p>LANDSCAPE — 2024</p>
+            </div>
+            <span class="work-year">02</span>
+          </a>
+        </div>
+
+        <!-- 03 Street — half width -->
+        <div class="col-lg-6">
+          <a href="project-3.html" class="work-card reveal" data-category="street" aria-label="View Passage">
+            <img src="https://images.pexels.com/photos/18867525/pexels-photo-18867525.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                 alt="City street aerial view at night" loading="lazy">
+            <div class="work-info">
+              <h3>Passage</h3>
+              <p>STREET — 2023</p>
+            </div>
+            <span class="work-year">03</span>
+          </a>
+        </div>
+
+        <!-- 04 Editorial — half width -->
+        <div class="col-lg-6">
+          <a href="project-4.html" class="work-card reveal" data-category="editorial" aria-label="View Matter">
+            <img src="https://images.pexels.com/photos/4594030/pexels-photo-4594030.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                 alt="Minimalist editorial product still life" loading="lazy">
+            <div class="work-info">
+              <h3>Matter</h3>
+              <p>EDITORIAL — 2023</p>
+            </div>
+            <span class="work-year">04</span>
+          </a>
+        </div>
+
+        <!-- 05 Portrait — wide featured -->
+        <div class="col-lg-8">
+          <a href="project-5.html" class="work-card big-card reveal" data-category="portrait" aria-label="View Vigil">
+            <img src="https://images.pexels.com/photos/34570608/pexels-photo-34570608.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                 alt="Dramatic portrait with soft studio lighting" loading="lazy">
+            <div class="work-info">
+              <h3>Vigil</h3>
+              <p>PORTRAIT — 2022</p>
+            </div>
+            <span class="work-year">05</span>
+          </a>
+        </div>
+
+        <!-- 06 Nature — narrow -->
+        <div class="col-lg-4">
+          <a href="project-6.html" class="work-card reveal" data-category="nature" aria-label="View Underworld">
+            <img src="https://images.pexels.com/photos/1268129/pexels-photo-1268129.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="Ancient forest with morning light filtering through trees" loading="lazy">
+            <div class="work-info">
+              <h3>Underworld</h3>
+              <p>NATURE — 2022</p>
+            </div>
+            <span class="work-year">06</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA & Footer -->
+  <section class="cta-section section-panel">
+    <div class="container-fluid px-4 px-lg-5">
+      <p class="eyebrow reveal">NEXT CHAPTER</p>
+      <h2 class="cta-text neon-hover reveal">Let's create together.</h2>
+      <div class="row footer-links mt-5 reveal">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <p class="footer-heading">NAVIGATION</p>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <p class="footer-heading">CONTACT</p>
+          <p class="footer-text"><a href="mailto:hello@studio.com" class="email-link">hello@studio.com</a></p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <p class="footer-heading">RADIUS</p>
+          <p class="footer-text">© 2026 — All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

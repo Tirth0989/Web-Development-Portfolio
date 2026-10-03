@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radius | Photography Portfolio</title>
+  <meta name="description" content="Radius — A photography portfolio spanning architecture, landscape, street, editorial, portrait and nature." />
+
+  <!-- Bootstrap 5.3 CSS — provides responsive grid, navbar, utilities -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Inter font — clean, modern editorial typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── LOADING SCREEN ────────────────────────────────────────────
+     Full-screen cinematic loader. JS removes it after 1.3s.
+     CSS animates the progress bar automatically.
+     Inspired by Tibalism's dramatic entrance feel.
+-->
+<div class="loader" id="loader" aria-hidden="true">
+  <span class="loader-brand">◉ RADIUS</span>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- ── NAVIGATION ───────────────────────────────────────────────
+     Bootstrap fixed-top navbar with glassmorphism background.
+     Nav items animate in with staggered delay (CSS keyframes).
+-->
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+    <div class="container-fluid px-4 px-lg-5">
+
+      <a class="navbar-brand brand-text" href="index.html">
+        <span class="brand-icon">◉</span> RADIUS
+      </a>
+
+      <!-- Bootstrap collapse toggle for mobile -->
+      <button class="navbar-toggler border-0 shadow-none" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav gap-lg-4">
+          <li class="nav-item"><a class="nav-link nav-custom active" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link nav-custom" href="work.html">PROJECTS</a></li>
+          <li class="nav-item"><a class="nav-link nav-custom" href="about.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link nav-custom" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ── HERO SECTION ───────────────────────────────────────────
+       Full-viewport hero — Tibalism-style full-bleed image.
+       Background image uses parallax (JS translateY on scroll).
+       Title uses split-text character animation (JS data-split).
+       Multimedia: Unsplash image + CSS/JS animation + parallax.
+  -->
+  <section class="hero-section">
+
+    <!-- Parallax background — JS applies transform: translateY -->
+    <div class="hero-bg"
+         style="background-image: url('https://images.pexels.com/photos/1133492/pexels-photo-1133492.jpeg?auto=compress&cs=tinysrgb&w=1920');"
+         role="img"
+         aria-label="Dramatic mountain landscape at dusk">
+    </div>
+
+    <!-- Gradient overlay for text legibility -->
+    <div class="hero-overlay"></div>
+
+    <!-- Animated year tag (top right) -->
+    <span class="hero-year">2022 — 2024</span>
+
+    <!-- Main hero content -->
+    <div class="hero-content container-fluid px-4 px-lg-5">
+      <!-- data-split triggers JS character split animation -->
+      <h1 class="hero-title" data-split>RADIUS</h1>
+      <p class="hero-copy">Light, shadow, and the spaces between.</p>
+    </div>
+
+    <!-- Animated scroll indicator (bottom right) -->
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="hero-scroll-text">Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+
+  </section>
+
+  <!-- ── MARQUEE TEXT STRIP ──────────────────────────────────────
+       Infinite scrolling text strip — editorial separator.
+       Two copies of the track play back-to-back seamlessly.
+       CSS animation: marqueeScroll 22s linear infinite.
+       Multimedia: CSS animation.
+  -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <!-- First copy -->
+      <span class="marquee-item">Architecture</span>
+      <span class="marquee-item">Landscape</span>
+      <span class="marquee-item">Street</span>
+      <span class="marquee-item">Editorial</span>
+      <span class="marquee-item">Portrait</span>
+      <span class="marquee-item">Nature</span>
+      <span class="marquee-item">Documentary</span>
+      <span class="marquee-item">Fine Art</span>
+      <!-- Second copy — creates seamless loop -->
+      <span class="marquee-item">Architecture</span>
+      <span class="marquee-item">Landscape</span>
+      <span class="marquee-item">Street</span>
+      <span class="marquee-item">Editorial</span>
+      <span class="marquee-item">Portrait</span>
+      <span class="marquee-item">Nature</span>
+      <span class="marquee-item">Documentary</span>
+      <span class="marquee-item">Fine Art</span>
+    </div>
+  </div>
+
+  <!-- ── STATS STRIP ─────────────────────────────────────────────
+       Animated number counters triggered by IntersectionObserver.
+       data-count and data-suffix attributes drive the JS counter.
+  -->
+  <div class="stats-strip">
+    <div class="stat-item reveal">
+      <span class="stat-number" data-count="120" data-suffix="+">0+</span>
+      <p class="stat-label">Commissions</p>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-number" data-count="14" data-suffix="">0</span>
+      <p class="stat-label">Years Active</p>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-number" data-count="6" data-suffix="">0</span>
+      <p class="stat-label">Projects</p>
+    </div>
+  </div>
+
+  <!-- ── PHILOSOPHY SECTION ──────────────────────────────────── -->
+  <section class="philosophy-section section-panel">
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="row">
+        <div class="col-lg-9">
+          <p class="eyebrow reveal">PHILOSOPHY</p>
+          <h2 class="philosophy-title reveal">
+            Every frame is a <span class="accent-text">deliberate</span>
+            intersection of light, texture, and <span class="accent-text">silence</span>.
+          </h2>
+          <div class="divider-line reveal"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── SELECTED PROJECTS CAROUSEL ──────────────────────────────
+       Horizontal drag-to-scroll carousel.
+       Grayscale images reveal colour on hover (CSS multimedia).
+       Images from Unsplash — real photography.
+       loading="lazy" on all carousel images for performance.
+  -->
+  <section class="projects-section section-panel" id="work">
+    <div class="container-fluid px-4 px-lg-5">
+
+      <div class="project-heading-row reveal">
+        <div>
+          <p class="eyebrow">SELECTED WORK</p>
+          <h2 class="section-heading">Projects</h2>
+        </div>
+        <p class="projects-count">06 PROJECTS</p>
+      </div>
+
+      <p style="font-size:0.68rem;letter-spacing:0.4em;color:rgba(255,255,255,0.15);margin-bottom:1rem;">
+        ← DRAG TO EXPLORE →
+      </p>
+
+      <!-- Drag-to-scroll container — JS handles mouse + touch drag -->
+      <div class="project-scroll" id="projectScroll" tabindex="0" aria-label="Selected work gallery">
+
+        <!-- Project 1: Silent Geometries — Architecture -->
+        <a href="project-1.html" class="project-card-link" aria-label="View Silent Geometries">
+          <article class="project-card">
+            <img src="https://images.pexels.com/photos/30797258/pexels-photo-30797258.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 class="project-img"
+                 alt="Abstract geometric brutalist architecture with hard shadows"
+                 loading="lazy">
+            <div class="project-info">
+              <h3>Silent Geometries</h3>
+              <p>ARCHITECTURE</p>
+            </div>
+            <span class="project-year">2024</span>
+          </article>
+        </a>
+
+        <!-- Project 2: Meridian — Landscape -->
+        <a href="project-2.html" class="project-card-link" aria-label="View Meridian">
+          <article class="project-card">
+            <img src="https://images.pexels.com/photos/2132095/pexels-photo-2132095.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 class="project-img"
+                 alt="Golden hour light over layered mountain ridges"
+                 loading="lazy">
+            <div class="project-info">
+              <h3>Meridian</h3>
+              <p>LANDSCAPE</p>
+            </div>
+            <span class="project-year">2024</span>
+          </article>
+        </a>
+
+        <!-- Project 3: Passage — Street -->
+        <a href="project-3.html" class="project-card-link" aria-label="View Passage">
+          <article class="project-card">
+            <img src="https://images.pexels.com/photos/18867525/pexels-photo-18867525.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 class="project-img"
+                 alt="Aerial view of city street with lone pedestrian at night"
+                 loading="lazy">
+            <div class="project-info">
+              <h3>Passage</h3>
+              <p>STREET</p>
+            </div>
+            <span class="project-year">2023</span>
+          </article>
+        </a>
+
+        <!-- Project 4: Matter — Editorial -->
+        <a href="project-4.html" class="project-card-link" aria-label="View Matter">
+          <article class="project-card">
+            <img src="https://images.pexels.com/photos/4594030/pexels-photo-4594030.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 class="project-img"
+                 alt="Minimalist editorial still-life product composition"
+                 loading="lazy">
+            <div class="project-info">
+              <h3>Matter</h3>
+              <p>EDITORIAL</p>
+            </div>
+            <span class="project-year">2023</span>
+          </article>
+        </a>
+
+        <!-- Project 5: Vigil — Portrait -->
+        <a href="project-5.html" class="project-card-link" aria-label="View Vigil">
+          <article class="project-card">
+            <img src="https://images.pexels.com/photos/34570608/pexels-photo-34570608.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 class="project-img"
+                 alt="Intimate portrait with soft dramatic lighting"
+                 loading="lazy">
+            <div class="project-info">
+              <h3>Vigil</h3>
+              <p>PORTRAIT</p>
+            </div>
+            <span class="project-year">2022</span>
+          </article>
+        </a>
+
+        <!-- Project 6: Underworld — Nature -->
+        <a href="project-6.html" class="project-card-link" aria-label="View Underworld">
+          <article class="project-card">
+            <img src="https://images.pexels.com/photos/1268129/pexels-photo-1268129.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 class="project-img"
+                 alt="Ancient forest floor with morning light filtering through trees"
+                 loading="lazy">
+            <div class="project-info">
+              <h3>Underworld</h3>
+              <p>NATURE</p>
+            </div>
+            <span class="project-year">2022</span>
+          </article>
+        </a>
+
+      </div><!-- /project-scroll -->
+    </div>
+  </section>
+
+  <!-- ── CTA & FOOTER ─────────────────────────────────────────────
+       Large interactive neon-hover heading.
+       Bootstrap three-column grid for footer links.
+  -->
+  <section class="cta-section section-panel">
+    <div class="container-fluid px-4 px-lg-5">
+      <p class="eyebrow reveal">NEXT CHAPTER</p>
+      <h2 class="cta-text neon-hover reveal">Let's create together.</h2>
+
+      <!-- Bootstrap responsive footer grid -->
+      <div class="row footer-links mt-5 reveal">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <p class="footer-heading">NAVIGATION</p>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <p class="footer-heading">CONTACT</p>
+          <p class="footer-text">
+            <a href="mailto:hello@studio.com" class="email-link">hello@studio.com</a>
+          </p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <p class="footer-heading">RADIUS</p>
+          <p class="footer-text">© 2026 — All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Bootstrap 5 JS bundle — required for navbar collapse -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="js/script.js"></script>
+</body>
+</html>

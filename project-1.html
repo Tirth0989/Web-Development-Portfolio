@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silent Geometries | Radius</title>
+  <meta name="description" content="Silent Geometries — ARCHITECTURE — 2024 photography project by Radius Studio." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Loading screen — cinematic entrance on every page -->
+<div class="loader" id="loader" aria-hidden="true">
+  <span class="loader-brand">◉ RADIUS</span>
+  <div class="loader-bar"></div>
+</div>
+
+<!-- ── FULL BOOTSTRAP NAVBAR ───────────────────────────────────
+     Same nav as all other pages. WORK link is active since
+     projects sit under the Work section.
+     Bootstrap: navbar-expand-lg, navbar-toggler, collapse.
+-->
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+    <div class="container-fluid px-4 px-lg-5">
+      <a class="navbar-brand brand-text" href="index.html">
+        <span class="brand-icon">◉</span> RADIUS
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav gap-lg-4">
+          <li class="nav-item"><a class="nav-link nav-custom" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link nav-custom active" href="work.html">PROJECTS</a></li>
+          <li class="nav-item"><a class="nav-link nav-custom" href="about.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link nav-custom" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ── FULL-VIEWPORT HERO ──────────────────────────────────────
+       CSS Ken Burns zoom (18s alternate — very subtle).
+       Gradient overlay fades bottom for title legibility.
+       loading="eager" — above the fold, load immediately.
+       Multimedia: Unsplash image + CSS animation + filter.
+  -->
+  <section class="project-hero">
+    <img src="https://images.pexels.com/photos/17501617/pexels-photo-17501617.jpeg?auto=compress&cs=tinysrgb&w=1920"
+         alt="Sweeping brutalist concrete facade with deep geometric shadow patterns"
+         class="project-hero-img"
+         loading="eager">
+    <div class="project-hero-overlay"></div>
+    <div class="project-hero-content container-fluid px-4 px-lg-5">
+      <p class="project-meta">ARCHITECTURE — 2024</p>
+      <h1 class="project-title">Silent Geometries</h1>
+    </div>
+  </section>
+
+  <!-- ── PROJECT INTRO — Bootstrap sidebar + wide content ───────
+       col-lg-3 sidebar holds metadata.
+       col-lg-8 offset-lg-1 holds summary + description.
+  -->
+  <section class="project-intro section-panel">
+    <div class="container-fluid px-4 px-lg-5">
+      <div class="row g-5">
+
+        <!-- Metadata sidebar -->
+        <div class="col-lg-3">
+          <div class="detail-block">
+            <p class="detail-label">LOCATION</p>
+            <p class="detail-value">Berlin, Tokyo, São Paulo</p>
+          </div>
+          <div class="detail-block">
+            <p class="detail-label">YEAR</p>
+            <p class="detail-value">2024</p>
+          </div>
+          <div class="detail-block">
+            <p class="detail-label">CATEGORY</p>
+            <p class="detail-value">Architecture</p>
+          </div>
+          <div class="detail-block">
+            <p class="detail-label">FORMAT</p>
+            <p class="detail-value">35mm / Medium Format</p>
+          </div>
+        </div>
+
+        <!-- Summary + description — unique per project -->
+        <div class="col-lg-8 offset-lg-1">
+          <h2 class="project-summary">An exploration of the spaces between walls, where light and shadow create a language of their own.</h2>
+          <p class="project-description">This series investigates the invisible architecture of brutalist spaces — the way light negotiates with concrete, the moments where structure meets void. Shot across three continents over two years, each frame captures the tension between human scale and monumental form. Brutalism is often dismissed as cold, but these photographs argue the opposite: that concrete, when lit correctly, breathes.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY — Bootstrap asymmetric grid ─────────────────────
+       Row 1: col-lg-8 (large) + col-lg-4 (small) side by side.
+       Row 2: col-lg-5 + col-lg-7 medium images.
+       CSS hover zoom + brightness reveal on each image.
+       loading="lazy" defers offscreen images (performance).
+       Descriptive alt text on all images (accessibility).
+  -->
+  <section class="project-gallery section-panel">
+    <div class="container-fluid px-4 px-lg-5">
+
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-8">
+          <figure class="gallery-card gallery-large">
+            <img src="https://images.pexels.com/photos/30797258/pexels-photo-30797258.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Abstract geometric building facade with hard angular shadows, Berlin" loading="lazy">
+            <figcaption>Brutalist facade, Berlin — 2024</figcaption>
+          </figure>
+        </div>
+        <div class="col-lg-4">
+          <figure class="gallery-card gallery-small">
+            <img src="https://images.pexels.com/photos/35058936/pexels-photo-35058936.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Concrete corridor receding into darkness" loading="lazy">
+            <figcaption>Concrete texture study — 2024</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-1">
+        <div class="col-lg-5">
+          <figure class="gallery-card gallery-medium">
+            <img src="https://images.pexels.com/photos/32191170/pexels-photo-32191170.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Stairwell with a dramatic shaft of overhead light, Tokyo" loading="lazy">
+            <figcaption>Interior stairwell, Tokyo — 2024</figcaption>
+          </figure>
+        </div>
+        <div class="col-lg-7">
+          <figure class="gallery-card gallery-medium">
+            <img src="https://images.pexels.com/photos/31438131/pexels-photo-31438131.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Geometric concrete structure viewed from below against a pale sky" loading="lazy">
+            <figcaption>Interior passage, São Paulo — 2024</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PREV / NEXT PROJECT NAVIGATION ───────────────────────── -->
+  <div class="container-fluid px-4 px-lg-5 pb-5">
+    <div class="project-nav">
+      <a href="project-6.html" class="project-nav-link prev">← Underworld</a>
+      <a href="project-2.html" class="project-nav-link next">Meridian →</a>
+    </div>
+  </div>
+
+  <!-- ── CTA & FOOTER — Bootstrap 3-column grid ───────────────── -->
+  <section class="cta-section section-panel">
+    <div class="container-fluid px-4 px-lg-5">
+      <p class="eyebrow reveal">NEXT CHAPTER</p>
+      <h2 class="cta-text neon-hover reveal">Let's create together.</h2>
+      <div class="row footer-links mt-5 reveal">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <p class="footer-heading">NAVIGATION</p>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <p class="footer-heading">CONTACT</p>
+          <p class="footer-text">
+            <a href="mailto:hello@studio.com" class="email-link">hello@studio.com</a>
+          </p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <p class="footer-heading">RADIUS</p>
+          <p class="footer-text">© 2026 — All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Bootstrap JS bundle — required for navbar collapse on mobile -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS: loader, split text, parallax, scroll reveal, etc. -->
+<script src="js/script.js"></script>
+</body>
+</html>
